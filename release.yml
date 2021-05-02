@@ -1,7 +1,7 @@
 trigger:
   branches:
     include:
-    - release-pipeline2
+    - release-pipeline4
 
 variables:
     buildConfiguration: 'Release'
