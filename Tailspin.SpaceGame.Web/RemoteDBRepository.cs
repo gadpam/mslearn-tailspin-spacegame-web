@@ -20,7 +20,8 @@ namespace Tailspin.SpaceGame.Web
         public RemoteDBRepository(IConfiguration config)
         {
             configuration = config;
-            connectionString = "Server=tcp:tailspinspacegamedatabaseserver.database.windows.net,1433;Initial Catalog=tailspindatabase;Persist Security Info=False;User ID=natale;Password=pass@word1;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+            connectionString = configuration.GetConnectionString("DefaultConnection");
+            //"Server=tcp:tailspinspacegamedatabaseserver.database.windows.net,1433;Initial Catalog=tailspindatabase;Persist Security Info=False;User ID=natale;Password=pass@word1;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
             //configuration.GetConnectionString("DefaultConnection");
         }
 
