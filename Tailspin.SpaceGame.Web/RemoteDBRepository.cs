@@ -21,8 +21,6 @@ namespace Tailspin.SpaceGame.Web
         {
             configuration = config;
             connectionString = configuration.GetConnectionString("DefaultConnection");
-            //"Server=tcp:tailspinspacegamedatabaseserver.database.windows.net,1433;Initial Catalog=tailspindatabase;Persist Security Info=False;User ID=natale;Password=pass@word1;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
-            //configuration.GetConnectionString("DefaultConnection");
         }
 
         public Task<Profile> GetProfileAsync(string profileId)
