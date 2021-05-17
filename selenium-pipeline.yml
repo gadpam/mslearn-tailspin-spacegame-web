@@ -72,7 +72,6 @@ stages:
 
 - stage: 'Test'
   displayName: 'Deploy to the test environment'
-  dependsOn: Dev
   jobs:
   - deployment: Deploy
     pool:
