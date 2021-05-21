@@ -5,7 +5,7 @@ trigger:
 
 variables:
   buildConfiguration: 'Release'
-  ServiceConnnectionName: 'Tailspin.SpaceGame.Web'
+  ServiceConnnectionName: 'Tailspin.SpaceGame.Web.Full'
 
 stages:
 - stage: 'Build'
@@ -125,5 +125,5 @@ stages:
             displayName: 'Azure App Service Deploy: website'
             inputs:
               azureSubscription: $(ServiceConnnectionName)
-              appName: 'tailspin-space-game-web-dev-6576' #$(WebAppNameDev)
+              appName: '#$(WebAppNameDev)'
               package: '$(Pipeline.Workspace)/drop/$(buildConfiguration)/*.zip'
